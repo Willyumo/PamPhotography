@@ -1,0 +1,948 @@
+
+.picture-section img.visible {
+    opacity: 1;
+}
+
+.zoom-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* fills the strip */
+    transform: scale(1.5); /* scale up 150% */
+    transform-origin: center center; /* zoom from the middle */
+  }
+  
+
+/* Images Carousel */
+.horizontal-scroll-section {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    top: 150px;
+    padding: 0 -300px;
+    height: 800px; /* Ensure container has enough height */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 100%; /* Full height of section */
+
+}
+
+.horizontal-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    align-items: center;
+    scroll-behavior: smooth;
+    gap: 200px; /* spacing between strips */
+    width: 100%;
+    height: 100%; /* Match container height */
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+
+        /* Hide scrollbars */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;     /* Firefox */
+}
+
+.horizontal-scroll-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.strip, .strip-portrait {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 80%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    margin-right: 200px;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    object-fit: contain;  /* shows the whole picture */
+      transform: scale(0.85); /* zoom out by default */
+    scroll-snap-align: center;
+
+}
+
+.carousel-arrow {
+    position: absolute;
+    bottom: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    font-size: 2rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 10px;
+    user-select: none;
+}
+
+.carousel-arrow.left {
+    left: 20px;
+}
+
+.carousel-arrow.right {
+    right: 20px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-right: 35%;
+    left: 20px;
+    margin-bottom: 50px;
+  }
+  
+  .carousel-dots .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    transition: background-color 0.3s;
+  }
+  
+  .carousel-dots .dot.active {
+    background-color: orange; /* highlight color */
+  }
+
+
+.indicator {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: rgb(0, 0, 0);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+:root {
+    --scroll-bg-color: black; /* Default color */
+    --navbar-bg-color: #D9D5D2;
+    --navbar-text-color: #0D0D0D;
+    --navbar-hover-color: orange;
+}
+
+
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Adjust this value as needed */
+    object-fit: cover;
+}
+
+
+.fade-in-on-scroll {
+    opacity: 0;
+    transform: translateY(0); /* Start below view */
+    transition: opacity 3s ease-in-out, transform 3s ease-in-out;
+}
+.fade-in-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(-20); /* Start at the top of the view */
+}
+/* Add the following CSS code to handle fading out of view */
+/* .fade-in-on-scroll.fade-out {
+    opacity: 1;
+    transform: translateY(50px); Start below view 
+} */
+
+.h1-section {
+    font-size: 3rem; /* Increase the font size */
+    text-shadow: 4px 2px 2px rgba(255, 165, 0, 0.7); /* #F27405 text shadow */
+    border: 2px solid white; /* Add a border */
+    padding: 1px 40px; /* Add padding inside the border */
+    display: inline-block; /* Make the element fit its content */
+    margin: 30px auto 50px; /* Center the element and adjust vertical spacing */
+    border-radius: 15px; /* Rounded corners */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.5); /* Outer glow effect */
+    position: relative; /* For pseudo-element positioning */
+}
+
+.h1-subsection {
+    font-size: 2rem; /* Slightly smaller font size */
+    text-shadow: 2px 1px 1px rgba(255, 165, 0, 0.5); /* Lighter text shadow */
+    border: 1px solid white; /* Thinner border */
+    padding: 20px 20px; /* Adjust padding */
+    display: block; /* Make the element fit its content */
+    margin: 0px auto; /* Adjust vertical spacing */
+    border-radius: 10px; /* Slightly rounded corners */
+    background-color: rgba(0, 0, 0, 0.3); /* Lighter semi-transparent background */
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.3); /* Subtle outer glow effect */
+    text-align: center; /* Center the text */
+    position: relative; /* For pseudo-element positioning */
+    color: white; /* White text color */
+    max-width: 80%; /* Limit the width */
+    width: fit-content; /* Shrink the element to fit its content */
+    line-height: 0.2;
+}
+
+.h1-subsection::before,
+.h1-subsection::after {
+    content: '•';
+    color: #F27405;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+}
+
+.h1-image-title {
+    font-size: 3rem; /* Increase the font size */
+    text-shadow: 4px 2px 2px rgba(255, 165, 0, 0.7); /* #F27405 text shadow */
+    border: 2px solid white; /* Add a border */
+    padding: 10px 60px; /* Add padding inside the border */
+    display: inline-block; /* Make the element fit its content */
+    border-radius: 5px; /* Rounded corners */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    box-shadow: 3px 3px 3px rgba(255, 165, 0, 0.5); /* Outer glow effect */
+    color: white;
+    position: absolute; /* Position absolutely within its container */
+    left: 60%; /* Move to the horizontal center */
+    transform: translateX(-50%); /* Adjust back by half its width */
+    top: 0px; /* Distance from the top of its container */
+    margin-top: 30px;
+    margin-bottom: 80px;
+    width: auto; /* Allow the width to adjust to content */
+    max-width: 90%; /* Prevent it from becoming too wide on small screens */
+    text-align: center; /* Center the text inside */
+    z-index: 10; /* Ensure it's above other elements */
+}
+
+.h1-portfolio-title {
+    text-shadow: 4px 2px 2px rgba(255, 165, 0, 0.7); /* #F27405 text shadow */
+    border: 2px solid white; /* Add a border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    box-shadow: 3px 3px 3px rgba(255, 165, 0, 0.5); /* Outer glow effect */
+    color: white;
+    left: 50%; /* Move to the horizontal center */
+    margin-bottom: 65px;
+    padding: 0px 0px; /* Add padding inside the border */
+    transform: translateX(-50%); /* Adjust back by half its width */
+    position: relative; /* Position absolutely within its container */
+    text-align: center;
+    font-size: 3rem; /* Increase the font size */ 
+    width: 400px; /* Allow the width to adjust to content */
+    max-width: 90%; /* Prevent it from becoming too wide on small screens */
+}
+
+/* Add this to the parent container of .h1-image-title */
+.image-container {
+    position: relative; /* Make it a positioning context for absolute elements */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 30px; /* Add some top padding to accommodate the title */
+    margin-bottom: 40px;
+}
+
+/* Add a decorative element */
+.h1-section::before,
+.h1-section::after {
+    content: '•';
+    color: #F27405;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+}
+
+.h1-section::before {
+    left: 15px;
+}
+
+.h1-section::after {
+    right: 15px;
+}
+
+.p-section {
+    font-size: 3rem; /* Increase the font size */
+    margin: 50px auto 10px; /* Center the paragraph and adjust vertical spacing */
+    max-width: 80%; /* Limit the width to 80% of its container */
+    text-align: center; /* Center the text */
+    border-radius: 15px; /* Rounded corners */
+    color: #0D0D0D; /* White text color */
+}
+
+.a-section a{
+    text-align: center; /* Center the text */
+    font-size: 2rem;
+    margin: 50px auto 10px; /* Center the section and adjust vertical spacing */
+    padding: 40px; /* Increased padding for more space between content and border */
+    max-width: 80%; /* Limit the width to 80% of its container */
+    color: #F27405;
+    text-decoration: none; /* Remove underline */
+}
+.a-section:hover {
+    color: black; /* Change color on hover */
+}
+
+/* Portfolio Section Background */
+#portfolio #index {
+    background-color: #D9D5D2; /* Dark background for the entire portfolio section */
+    padding: 50px 0; /* Add some padding for spacing */
+}
+
+/* project pages top section*/
+.project-page {
+    background-color: #D9D5D2; /* Light background for the project page */
+}
+
+#portfolio .row {
+    margin-bottom: 30px;
+}
+
+#portfolio .py-5 {
+    background-color: #000000; /* Light background for the portfolio section */
+    padding: 0px 0; /* Add some padding for spacing */
+}
+/* Cards inside the portfolio section */
+#portfolio .card {
+    background-color: #0D0D0D; /* Dark background for cards */
+    color: white; /* White text for cards */
+    border-radius: 10px; /* Rounded edges for cards */
+    border: 2px solid #444; /* Border for cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#portfolio .card:hover {
+    transform: scale(1.05); /* Slightly enlarge cards on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Images inside cards */
+#portfolio .card-img-top {
+    border-top-left-radius: 15px; /* Rounded edges for top of card images */
+    border-top-right-radius: 15px;
+}
+
+/* Card body */
+#portfolio .card-body {
+    padding: 20px;
+}
+
+/* Card title */
+#portfolio .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #A66124;
+    
+}
+
+/* Card text */
+#portfolio .card-text {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    
+}
+
+/* Buttons inside cards */
+#portfolio .btn-primary {
+    background-color: #736C66; /* Bootstrap primary color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#portfolio .btn-primary:hover {
+    background-color: orange; /* Darker shade on hover */
+}
+
+.col-md-4 {
+    margin-bottom: 90px; /* Space between rows of cards */
+    padding-left: 20px;
+}
+
+/* Makes the cards appear in a line horizontally instead of vertically */
+.row-card-spacing {
+    padding: 100px;
+    margin: 100px;
+}
+
+.row-mt-4 {
+    margin-top: -50px; /* Space between rows of cards */
+    padding: 10px;
+}
+
+.card {
+    position: relative; /* creates stacking context */
+    z-index: 10;
+}
+
+  .col-md-4,
+  .row,
+  .container,
+  .middle-section,
+  .card {
+    overflow: visible !important;
+  }
+  
+.card .dropdown-menu {
+    position: absolute ;
+    z-index: 9999 !important;
+  }
+
+  .dropdown-menu .dropdown-item:hover {
+    background-color: #007bff; /* Blue highlight */
+    color: white; /* Text color on hover */
+    cursor: pointer;
+}
+
+/* Sidebar base */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 60px; /* collapsed width */
+    background-color: #1a1a1a;
+    overflow-x: hidden;
+    transition: width 0.3s ease;
+    z-index: 1000;
+  }
+  
+  /* expand on hover */
+  .sidebar:hover {
+    width: 200px;
+  }
+  
+  /* logo */
+  .sidebar-logo {
+    overflow: hidden;  /* hides cropped parts when scaling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px, 0, 0, 0;
+    margin: 30px;
+  }
+  
+  .sidebar-logo img {
+    width: 150px;
+    height: 100px;
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar:hover .sidebar-logo img {
+    transform: scale(1.2);
+  }
+  
+  /* links */
+  .sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0px 0 0 0;
+  }
+  
+  .sidebar-links li {
+    padding: 10px;
+    white-space: nowrap;
+  }
+  
+  .sidebar-links a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: color 0.3s ease;
+  }
+  
+  .sidebar-links a:hover {
+    color: #f39c12;
+  }
+
+
+.text-center {
+    padding: 20px;
+    margin: 20px;
+    justify-items: center;
+}
+
+#about .p-section{
+    color: #D9D5D2;
+    font-size: 2.5rem;
+}
+/* Shrink the width of the form fields in the contact form */
+#contact .mb-3 {
+    max-width: 500px; /* Set the maximum width */
+    margin: 0 auto; /* Center the fields horizontally */
+}
+
+#contact .mb-4 {
+    margin: 50px auto; /* Center the fields horizontally */
+    max-width: 500px; /* Set the maximum width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact .p-section {
+    color: #D9D5D2; /* White text color */
+    font-size: 2rem;
+    /*max-width: 90%; /* Limit the width to 80% of its container */
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+#contact .form-label {
+    color: #D9D5D2; /* White text color */
+    
+}
+
+#contact .btn-primary-2 {
+    background-color: orange; /* orange text color */
+    /*border:none;*/
+    border-radius: 122px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    border-color: #D9D5D2; 
+}
+
+#contact .bottom-section {
+    background-color: #D9D5D2; /* Light background for the contact section */
+
+}
+
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 767px) {
+    body {
+        padding-top: 100px;
+        font-size: 16px;
+    }
+
+    .navbar {
+        padding: 0.5rem 1rem;
+        
+    }
+
+    .navbar-logo {
+        height: 40px;
+        width: 40px;
+        margin: 0;
+    }
+
+    .navbar-brand {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .social-links-container {
+        position: fixed;
+        justify-content: flex-end;
+        top: 10px;
+        right: 10px;
+        background-color: black;
+        padding: 8px;
+        border-radius: 8px;
+        z-index: 999;
+    }
+
+    .social-links {
+        display: flex;
+        list-style: none;
+        flex-direction: row;
+        gap: 10px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .horizontal-scroll-section {
+        height: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch; /* for iOS momentum scroll */
+        margin-top: -60px;
+        scroll-behavior: smooth;
+
+    }
+
+    .horizontal-scroll-container {
+        display: flex;
+        flex-wrap: nowrap;
+        position: relative;
+        height: 500px;
+        width: 100%;
+        margin-bottom: 100px;
+        margin-top: -60px;
+    }
+
+    
+    .horizontal-scroll-section::-webkit-scrollbar {
+    display: none; /* for Chrome/Safari */
+    }
+
+    .strip {
+        width: 100px;
+        height: 500px;
+        flex-shrink: 0; /* 🔑 Prevents shrinking when container overflows */
+
+    }
+
+    .strip-portrait {
+        width: 100px;
+        height: 500px;
+        flex-shrink: 0; /* 🔑 Prevents shrinking when container overflows */
+
+    }
+
+    .strip:hover{
+        width: 100%;
+        height: 500px;
+        background-size: contain; /* keeps whole image visible */
+        background-repeat: no-repeat;
+        background-position: center;
+        flex: 0 0 auto;
+        transform: scale(1.2); /* 80% of original size */
+        transform-origin: center; /* ensures it scales from center */
+        margin-top: 30%;
+    }
+
+    .strip-portrait:hover {
+        width: 100%;
+        height: 500px;
+        background-size: contain; /* keeps whole image visible */
+        background-repeat: no-repeat;
+        background-position: center;
+        flex: 0 0 auto;
+        transform: scale(0.8); /* 80% of original size */
+        transform-origin: center; /* ensures it scales from center */
+        margin-top:30%;
+    }
+
+
+    .h1-image-title {
+        position: absolute;
+        top: 100px; /* Enough space below navbar */
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2; /* Just above the strips but not globally floating */
+        padding: 8px 16px;
+        width: 90%;
+        max-width: 300px;
+        font-size: 1.4rem;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: 2px solid white;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 2px 2px 8px rgba(255, 165, 0, 0.5);
+    }
+
+
+    .h1-portfolio-title {
+    position: relative !important;
+    top: 50px; /* Adjust as needed for mobile spacing */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    width: auto;
+    padding: 8px 16px;
+    font-size: 1.6rem;
+    }
+
+    
+    .social-links-container {
+        position: sticky;
+        top: 45px;
+        margin-top: -50px;
+        right: 10px;
+        padding: 0px 30px 0px 0px;
+        border-radius: 0px;
+        z-index: 990;
+        display: flex;
+        justify-content: flex-end;
+    /*    background-color:  #736C66;*/
+        background-color: transparent; 
+    }
+
+    #portfolio #index
+    .navbar-brand {
+        font-size: 2rem;
+    }
+
+    #price #contact #about
+    .navbar-brand {
+        font-size: 2rem;
+    }
+
+    .social-links {
+        padding: -30px 0px 0px;
+    }
+
+    #porfolio #index #price #contact #about
+    .horizontal-scroll-section, 
+    .horizontal-scroll-container {
+        padding-top: 50px;
+        margin-top: 50px;
+    }
+
+    #portfolio #index .head-container {
+        background-color: #736C66; /* or match your navbar/bg */
+    }
+
+    .card-img-top {
+        height: 150px;
+    }
+
+    #portfolio #index .card-title {
+        font-size: 1.2rem;
+    }
+
+    #portfolio #index .card-text {
+        font-size: 0.9rem;
+    }
+
+    .row-card-spacing {
+        padding-bottom: -200px;
+        padding-top: -40px;
+        margin-bottom: -200px;
+        margin-top: -40px;
+    }
+
+    .col-md-4 {
+        padding-bottom: 100px;
+    }
+
+    /* mobile social icons size*/
+    .social-icon {
+        width: 50px;  
+        height: 50px; 
+    }
+
+    #portfolio #index #price .btn-primary {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .middle-section,
+    #portfolio,
+    #price .middle-section {
+        padding: 20px 10px;
+    }
+
+    .h1-section {
+        font-size: 1.5rem;
+        margin: 20px auto;
+        padding: .6em;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+
+    }
+
+    .h1-subsection::before,
+    .h1-subsection::after {
+        content: '•';
+        color: #F27405;
+        position: relative;
+        padding: 20px 0px 20px 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 3rem;
+    }
+
+    #price .fade-in-on-scroll {
+       position: relative;
+       left: -100px;
+       margin-left: -350px;
+       padding: -400px;
+       margin-bottom: 200px;
+       font-size: .5rem;
+    }
+
+    #price .middle-section {
+        background-color: #D9D5D2;
+
+    }
+
+    #price .h1-image-title {
+        padding: .2em;
+        font-size: 2rem;
+    }
+
+#price .custom-bullet-list,
+#price .sublist {
+    font-size: 1rem;
+    padding-left: 20px;
+    word-break: break-word;
+    text-wrap: pretty;;
+
+}
+
+#price .custom-bullet-list li,
+#price .sublist li {
+    font-size: 2rem;
+    line-height: 1.5;
+    text-wrap: pretty;;
+    margin-bottom: 10px;
+}
+
+    
+    #price .p-section {
+        font-size: 1.5rem;
+        padding-bottom: 50px; /* ← large bottom padding */
+        max-width: 300px;
+    }
+
+    #project1 #project2 #project3 
+    #project4 #project5 #project6
+    #project7 #project8 #project9 
+    .h1-section, .p-section {
+        font-size: 2rem;
+        margin-top: -80px;
+        padding-top: -150px;
+        padding-bottom: 40px;
+        max-width: 300px;
+    }
+
+
+    .scroll-container img {
+        margin-top: -40px;
+        opacity: 1 !important;
+        transform: none !important;
+        left: 0px;
+
+    }
+
+    #project1 #project2 #project3 
+    #project4 #project5 #project6
+    #project7 #project8 #project9
+    .scroll-container {
+        padding-top: 100px;
+        margin-top: 100px;
+    }
+
+    .fade-in-on-scroll {
+        position: relative;
+        top: 200px;
+        padding-bottom: 300px;
+        margin-top: 100px;
+    }
+
+    .picture-section img {
+        height: 80%;
+        width: 80%;
+        max-width: 350px;
+        padding-bottom: 0px;
+        margin-bottom: 200px;
+    }
+
+    #project1 #project2 #project3 
+    #project4 #project5 #project6
+    #project7 #project8 #project9 
+    .text-center {
+        padding-top: 100px;
+        margin-top: 100px;
+    }
+
+    .pricing-list, 
+    .custom-bullet-list, 
+    .bottom-section, 
+    .a-section {
+        width: 100%;
+        max-width: 400px;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    #price .bottom-section {
+        display: flex;
+        position: relative;
+    }
+
+    body {
+        overflow-x: hidden;
+        padding-bottom: 50px;
+    }
+
+    #contact .p-section {
+        font-size: 1.5rem;
+    }
+
+    #contact .h1-subsection {
+        margin-bottom: 100px;
+    }
+
+    #contact .container {
+        padding-top: 50px;
+    }
+
+
+
+    #contact .mb-3,
+    #contact .mb-4 {
+        max-width: 90%;
+    }
+
+
+    #about .p-section {
+        margin: 20px auto 5px;
+        font-size: 1.5rem;
+        max-width: 325px;
+    }
+
+    .middle-section {
+        margin-top: -60px;
+    }
+
+    .bottom-section {
+        font-size: 2rem;
+        padding: 20px 10px;
+        margin-bottom: -50px;
+    }
+}
+
+/*  @media (max-width: 991px) {
+    .navbar {
+        align-items: center; 
+    }
+    .container-fluid {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .navbar-brand-container {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .social-links-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: left;
+        margin-top: 0px; 
+        padding: 10px 20px 0; 
+        background-color: transparent; 
+    }
+
+    .social-links {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar-nav {
+        margin-right: 0; 
+        margin-left: auto;
+        align-items: center;
+    }
+} */
