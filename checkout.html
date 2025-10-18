@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body style="background-color:#111; color:white; text-align:center; padding:40px;">
+  <h1>Checkout</h1>
+  <img id="checkout-image" src="" alt="Selected photo" style="max-width:400px; border-radius:10px;"><br><br>
+  <div id="checkout-details">
+    Project: <span class="project"></span><br>
+    Size: <span class="size"></span><br>
+    Price: <span class="price"></span>
+  </div>
+  <form style="margin-top:20px;">
+    <input type="text" placeholder="Full Name" required><br><br>
+    <input type="text" placeholder="Card Number" required><br><br>
+    <button type="submit" class="btn btn-primary">Purchase</button>
+  </form>
+
+  <script>
+  const params = new URLSearchParams(window.location.search);
+  document.getElementById('checkout-image').src = params.get('image');
+  document.querySelector('.project').textContent = params.get('project') || 'N/A';
+  document.querySelector('.size').textContent = params.get('size') || 'N/A';
+  document.querySelector('.price').textContent = `$${params.get('price') || '0'}`;
+  </script>
+</body>
+</html>

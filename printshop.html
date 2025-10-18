@@ -25,7 +25,13 @@
                     <!-- Portfolio section -->
                     <div class="col-md-4">
                     <div class="card">
-                        <img src="Images/JJ_solo_grad.jpg" class="card-img-top" alt="Project 1">
+                        <div class="image-slider" data-project="grad">
+                        <button class="arrow prev" onclick="changeSlide('grad', -1)">&#10094;</button>
+                        <img src="Images/JJ_solo_grad.jpg" class="grad-slide active card-img-top" alt="Graduation 1">
+                        <img src="Images/Ocean_Sand_2.jpg" class="grad-slide card-img-top" alt="Graduation 2">
+                        <img src="Images/JJ_solo_grad3.jpg" class="grad-slide card-img-top" alt="Graduation 3">
+                        <button class="arrow next" onclick="changeSlide('grad', 1)">&#10095;</button>
+                        </div>                        
                         <div class="card-body">
                             <h5 class="card-title">Graduation</h5>
                             <p class="card-text">Brief description of the project.</p>
@@ -35,11 +41,200 @@
                                 Available Sizes
                                 </button>
                                 <ul class="dropdown-menu">
-                                <li><a class="dropdown-item">8x10 - $15</a></li>
-                                <li><a class="dropdown-item">20x24 - $60</a></li>
-                                <li><a class="dropdown-item">24x36 - $100</a></li>
-                                <li><a class="dropdown-item">11x14 - $25</a></li>
-                                <li><a class="dropdown-item">16x20 - $40</a></li>
+                                    <li><a class="dropdown-item" data-size="8x10" data-price="15" href="#">8x10 - $15</a></li>
+                                    <li><a class="dropdown-item" data-size="20x24" data-price="60" href="#">20x24 - $60</a></li>
+                                    <li><a class="dropdown-item" data-size="24x36" data-price="100" href="#">24x36 - $100</a></li>
+                                    <li><a class="dropdown-item" data-size="11x14" data-price="25" href="#">11x14 - $25</a></li>
+                                    <li><a class="dropdown-item" data-size="16x20" data-price="40" href="#">16x20 - $40</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="image-slider" data-project="grad">
+                        <button class="arrow prev" onclick="changeSlide('grad', -1)">&#10094;</button>
+                        <img src="Images/JJ_solo_grad.jpg" class="grad-slide active card-img-top" alt="Graduation 1">
+                        <img src="Images/Ocean_Sand_2.jpg" class="grad-slide card-img-top" alt="Graduation 2">
+                        <img src="Images/JJ_solo_grad3.jpg" class="grad-slide card-img-top" alt="Graduation 3">
+                        <button class="arrow next" onclick="changeSlide('grad', 1)">&#10095;</button>
+                        </div>
+                       <div class="card-body">
+                            <h5 class="card-title">Cosplay Shoot</h5>
+                            <p class="card-text">Brief description of the project.</p>
+                            <!-- Dropdown -->
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                Available Sizes
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" data-size="8x10" data-price="15" href="#">8x10 - $15</a></li>
+                                    <li><a class="dropdown-item" data-size="20x24" data-price="60" href="#">20x24 - $60</a></li>
+                                    <li><a class="dropdown-item" data-size="24x36" data-price="100" href="#">24x36 - $100</a></li>
+                                    <li><a class="dropdown-item" data-size="11x14" data-price="25" href="#">11x14 - $25</a></li>
+                                    <li><a class="dropdown-item" data-size="16x20" data-price="40" href="#">16x20 - $40</a></li>
+                                </ul>
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+				  <br>
+				<!-- Project 3 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="image-slider" data-project="grad">
+                        <button class="arrow prev" onclick="changeSlide('grad', -1)">&#10094;</button>
+                        <img src="Images/JJ_solo_grad.jpg" class="grad-slide active card-img-top" alt="Graduation 1">
+                        <img src="Images/Ocean_Sand_2.jpg" class="grad-slide card-img-top" alt="Graduation 2">
+                        <img src="Images/JJ_solo_grad3.jpg" class="grad-slide card-img-top" alt="Graduation 3">
+                        <button class="arrow next" onclick="changeSlide('grad', 1)">&#10095;</button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Birthday Bash</h5>
+                            <p class="card-text">Brief description of the project.</p>
+                            <!-- Dropdown -->
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                Available Sizes
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" data-size="8x10" data-price="15" href="#">8x10 - $15</a></li>
+                                    <li><a class="dropdown-item" data-size="20x24" data-price="60" href="#">20x24 - $60</a></li>
+                                    <li><a class="dropdown-item" data-size="24x36" data-price="100" href="#">24x36 - $100</a></li>
+                                    <li><a class="dropdown-item" data-size="11x14" data-price="25" href="#">11x14 - $25</a></li>
+                                    <li><a class="dropdown-item" data-size="16x20" data-price="40" href="#">16x20 - $40</a></li>
+                                </ul>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+  			</div>
+            </div>
+			<div class= "row-mt-4"> <!-- add margin-top to create spacing -->
+            <div class="row card-spacing">
+
+				<!-- Project 4 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="image-slider" data-project="grad">
+                        <button class="arrow prev" onclick="changeSlide('grad', -1)">&#10094;</button>
+                        <img src="Images/JJ_solo_grad.jpg" class="grad-slide active card-img-top" alt="Graduation 1">
+                        <img src="Images/Ocean_Sand_2.jpg" class="grad-slide card-img-top" alt="Graduation 2">
+                        <img src="Images/JJ_solo_grad3.jpg" class="grad-slide card-img-top" alt="Graduation 3">
+                        <button class="arrow next" onclick="changeSlide('grad', 1)">&#10095;</button>
+                        </div>
+                        <!-- Portfolio section -->
+                        <div class="card-body">
+                            <h5 class="card-title">Texas Trip</h5>
+                            <p class="card-text">Brief description of the project.</p>
+                            <!-- Dropdown -->
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                Available Sizes
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" data-size="8x10" data-price="15" href="#">8x10 - $15</a></li>
+                                    <li><a class="dropdown-item" data-size="20x24" data-price="60" href="#">20x24 - $60</a></li>
+                                    <li><a class="dropdown-item" data-size="24x36" data-price="100" href="#">24x36 - $100</a></li>
+                                    <li><a class="dropdown-item" data-size="11x14" data-price="25" href="#">11x14 - $25</a></li>
+                                    <li><a class="dropdown-item" data-size="16x20" data-price="40" href="#">16x20 - $40</a></li>
+                                </ul>
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="image-slider" data-project="grad">
+                        <button class="arrow prev" onclick="changeSlide('grad', -1)">&#10094;</button>
+                        <img src="Images/JJ_solo_grad.jpg" class="grad-slide active card-img-top" alt="Graduation 1">
+                        <img src="Images/Ocean_Sand_2.jpg" class="grad-slide card-img-top" alt="Graduation 2">
+                        <img src="Images/JJ_solo_grad3.jpg" class="grad-slide card-img-top" alt="Graduation 3">
+                        <button class="arrow next" onclick="changeSlide('grad', 1)">&#10095;</button>
+                        </div>
+                        <!-- Portfolio section -->
+                        <div class="card-body">
+                            <h5 class="card-title">Charleston Trip</h5>
+                            <p class="card-text">Brief description of the project.</p>
+                            <!-- Dropdown -->
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                Available Sizes
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" data-size="8x10" data-price="15" href="#">8x10 - $15</a></li>
+                                    <li><a class="dropdown-item" data-size="20x24" data-price="60" href="#">20x24 - $60</a></li>
+                                    <li><a class="dropdown-item" data-size="24x36" data-price="100" href="#">24x36 - $100</a></li>
+                                    <li><a class="dropdown-item" data-size="11x14" data-price="25" href="#">11x14 - $25</a></li>
+                                    <li><a class="dropdown-item" data-size="16x20" data-price="40" href="#">16x20 - $40</a></li>
+                                </ul>
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 6 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="image-slider" data-project="grad">
+                        <button class="arrow prev" onclick="changeSlide('grad', -1)">&#10094;</button>
+                        <img src="Images/JJ_solo_grad.jpg" class="grad-slide active card-img-top" alt="Graduation 1">
+                        <img src="Images/Ocean_Sand_2.jpg" class="grad-slide card-img-top" alt="Graduation 2">
+                        <img src="Images/JJ_solo_grad3.jpg" class="grad-slide card-img-top" alt="Graduation 3">
+                        <button class="arrow next" onclick="changeSlide('grad', 1)">&#10095;</button>
+                        </div>
+                        <!-- Portfolio section -->
+                        <div class="card-body">
+                            <h5 class="card-title">Seasonal Shoots</h5>
+                            <p class="card-text">Brief description of the project.</p>
+                            <!-- Dropdown -->
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                Available Sizes
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" data-size="8x10" data-price="15" href="#">8x10 - $15</a></li>
+                                    <li><a class="dropdown-item" data-size="20x24" data-price="60" href="#">20x24 - $60</a></li>
+                                    <li><a class="dropdown-item" data-size="24x36" data-price="100" href="#">24x36 - $100</a></li>
+                                    <li><a class="dropdown-item" data-size="11x14" data-price="25" href="#">11x14 - $25</a></li>
+                                    <li><a class="dropdown-item" data-size="16x20" data-price="40" href="#">16x20 - $40</a></li>
+                                </ul>
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>  
+                <div class= "row-mt-4"> <!-- add margin-top to create spacing -->
+                <div class="row card-spacing">
+
+                    <!-- Project 1 -->
+                    <!-- Portfolio section -->
+                    <div class="col-md-4">
+                    <div class="card">
+                        <div class="image-slider" data-project="grad">
+                        <button class="arrow prev" onclick="changeSlide('grad', -1)">&#10094;</button>
+                        <img src="Images/JJ_solo_grad.jpg" class="grad-slide active card-img-top" alt="Graduation 1">
+                        <img src="Images/Ocean_Sand_2.jpg" class="grad-slide card-img-top" alt="Graduation 2">
+                        <img src="Images/JJ_solo_grad3.jpg" class="grad-slide card-img-top" alt="Graduation 3">
+                        <button class="arrow next" onclick="changeSlide('grad', 1)">&#10095;</button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Graduation</h5>
+                            <p class="card-text">Brief description of the project.</p>
+                            <!-- Dropdown -->
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                Available Sizes
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" data-size="8x10" data-price="15" href="#">8x10 - $15</a></li>
+                                    <li><a class="dropdown-item" data-size="20x24" data-price="60" href="#">20x24 - $60</a></li>
+                                    <li><a class="dropdown-item" data-size="24x36" data-price="100" href="#">24x36 - $100</a></li>
+                                    <li><a class="dropdown-item" data-size="11x14" data-price="25" href="#">11x14 - $25</a></li>
+                                    <li><a class="dropdown-item" data-size="16x20" data-price="40" href="#">16x20 - $40</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -49,7 +244,13 @@
                 <div class="col-md-4">
                     <div class="card">
                         <!-- Portfolio section -->
-                        <img src="Images/Ocean_Sand_2.jpg" class="card-img-top" alt="Project 2" style="object-fit: cover; object-position: center 20%;">
+                        <div class="image-slider" data-project="grad">
+                        <button class="arrow prev" onclick="changeSlide('grad', -1)">&#10094;</button>
+                        <img src="Images/JJ_solo_grad.jpg" class="grad-slide active card-img-top" alt="Graduation 1">
+                        <img src="Images/Ocean_Sand_2.jpg" class="grad-slide card-img-top" alt="Graduation 2">
+                        <img src="Images/JJ_solo_grad3.jpg" class="grad-slide card-img-top" alt="Graduation 3">
+                        <button class="arrow next" onclick="changeSlide('grad', 1)">&#10095;</button>
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Cosplay Shoot</h5>
                             <p class="card-text">Brief description of the project.</p>
@@ -59,11 +260,11 @@
                                 Available Sizes
                                 </button>
                                 <ul class="dropdown-menu">
-                                <li><a class="dropdown-item">8x10 - $15</a></li>
-                                <li><a class="dropdown-item">20x24 - $60</a></li>
-                                <li><a class="dropdown-item">24x36 - $100</a></li>
-                                <li><a class="dropdown-item">11x14 - $25</a></li>
-                                <li><a class="dropdown-item">16x20 - $40</a></li>
+                                    <li><a class="dropdown-item" data-size="8x10" data-price="15" href="#">8x10 - $15</a></li>
+                                    <li><a class="dropdown-item" data-size="20x24" data-price="60" href="#">20x24 - $60</a></li>
+                                    <li><a class="dropdown-item" data-size="24x36" data-price="100" href="#">24x36 - $100</a></li>
+                                    <li><a class="dropdown-item" data-size="11x14" data-price="25" href="#">11x14 - $25</a></li>
+                                    <li><a class="dropdown-item" data-size="16x20" data-price="40" href="#">16x20 - $40</a></li>
                                 </ul>
                             </div>                        
                         </div>
@@ -74,7 +275,13 @@
                 <div class="col-md-4">
                     <div class="card">
                         <!-- Portfolio section -->
-                        <img src="Images/Brooke_Mural_2.jpg" class="card-img-top" alt="Project 3">
+                        <div class="image-slider" data-project="grad">
+                        <button class="arrow prev" onclick="changeSlide('grad', -1)">&#10094;</button>
+                        <img src="Images/JJ_solo_grad.jpg" class="grad-slide active card-img-top" alt="Graduation 1">
+                        <img src="Images/Ocean_Sand_2.jpg" class="grad-slide card-img-top" alt="Graduation 2">
+                        <img src="Images/JJ_solo_grad3.jpg" class="grad-slide card-img-top" alt="Graduation 3">
+                        <button class="arrow next" onclick="changeSlide('grad', 1)">&#10095;</button>
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Birthday Bash</h5>
                             <p class="card-text">Brief description of the project.</p>
@@ -84,11 +291,11 @@
                                 Available Sizes
                                 </button>
                                 <ul class="dropdown-menu">
-                                <li><a class="dropdown-item">8x10 - $15</a></li>
-                                <li><a class="dropdown-item">20x24 - $60</a></li>
-                                <li><a class="dropdown-item">24x36 - $100</a></li>
-                                <li><a class="dropdown-item">11x14 - $25</a></li>
-                                <li><a class="dropdown-item">16x20 - $40</a></li>
+                                    <li><a class="dropdown-item" data-size="8x10" data-price="15" href="#">8x10 - $15</a></li>
+                                    <li><a class="dropdown-item" data-size="20x24" data-price="60" href="#">20x24 - $60</a></li>
+                                    <li><a class="dropdown-item" data-size="24x36" data-price="100" href="#">24x36 - $100</a></li>
+                                    <li><a class="dropdown-item" data-size="11x14" data-price="25" href="#">11x14 - $25</a></li>
+                                    <li><a class="dropdown-item" data-size="16x20" data-price="40" href="#">16x20 - $40</a></li>
                                 </ul>
                             </div>
                        </div>
@@ -103,7 +310,13 @@
                 <div class="col-md-4">
                     <div class="card">
                         <!-- Portfolio section -->
-                        <img src="Images/Project4_Images/Brooke_Garden_2.jpg" class="card-img-top" alt="Project 4">
+                        <div class="image-slider" data-project="grad">
+                        <button class="arrow prev" onclick="changeSlide('grad', -1)">&#10094;</button>
+                        <img src="Images/JJ_solo_grad.jpg" class="grad-slide active card-img-top" alt="Graduation 1">
+                        <img src="Images/Ocean_Sand_2.jpg" class="grad-slide card-img-top" alt="Graduation 2">
+                        <img src="Images/JJ_solo_grad3.jpg" class="grad-slide card-img-top" alt="Graduation 3">
+                        <button class="arrow next" onclick="changeSlide('grad', 1)">&#10095;</button>
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Texas Trip</h5>
                             <p class="card-text">Brief description of the project.</p>
@@ -113,11 +326,11 @@
                                 Available Sizes
                                 </button>
                                 <ul class="dropdown-menu">
-                                <li><a class="dropdown-item">8x10 - $15</a></li>
-                                <li><a class="dropdown-item">20x24 - $60</a></li>
-                                <li><a class="dropdown-item">24x36 - $100</a></li>
-                                <li><a class="dropdown-item">11x14 - $25</a></li>
-                                <li><a class="dropdown-item">16x20 - $40</a></li>
+                                    <li><a class="dropdown-item" data-size="8x10" data-price="15" href="#">8x10 - $15</a></li>
+                                    <li><a class="dropdown-item" data-size="20x24" data-price="60" href="#">20x24 - $60</a></li>
+                                    <li><a class="dropdown-item" data-size="24x36" data-price="100" href="#">24x36 - $100</a></li>
+                                    <li><a class="dropdown-item" data-size="11x14" data-price="25" href="#">11x14 - $25</a></li>
+                                    <li><a class="dropdown-item" data-size="16x20" data-price="40" href="#">16x20 - $40</a></li>
                                 </ul>
                             </div>                        
                         </div>
@@ -127,7 +340,13 @@
                 <div class="col-md-4">
                     <div class="card">
                         <!-- Portfolio section -->
-                        <img src="Images/Project5_Images/Ocean_Sunset_12.jpg" class="card-img-top" alt="Project 5">
+                        <div class="image-slider" data-project="grad">
+                        <button class="arrow prev" onclick="changeSlide('grad', -1)">&#10094;</button>
+                        <img src="Images/JJ_solo_grad.jpg" class="grad-slide active card-img-top" alt="Graduation 1">
+                        <img src="Images/Ocean_Sand_2.jpg" class="grad-slide card-img-top" alt="Graduation 2">
+                        <img src="Images/JJ_solo_grad3.jpg" class="grad-slide card-img-top" alt="Graduation 3">
+                        <button class="arrow next" onclick="changeSlide('grad', 1)">&#10095;</button>
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Charleston Trip</h5>
                             <p class="card-text">Brief description of the project.</p>
@@ -137,11 +356,11 @@
                                 Available Sizes
                                 </button>
                                 <ul class="dropdown-menu">
-                                <li><a class="dropdown-item">8x10 - $15</a></li>
-                                <li><a class="dropdown-item">20x24 - $60</a></li>
-                                <li><a class="dropdown-item">24x36 - $100</a></li>
-                                <li><a class="dropdown-item">11x14 - $25</a></li>
-                                <li><a class="dropdown-item">16x20 - $40</a></li>
+                                    <li><a class="dropdown-item" data-size="8x10" data-price="15" href="#">8x10 - $15</a></li>
+                                    <li><a class="dropdown-item" data-size="20x24" data-price="60" href="#">20x24 - $60</a></li>
+                                    <li><a class="dropdown-item" data-size="24x36" data-price="100" href="#">24x36 - $100</a></li>
+                                    <li><a class="dropdown-item" data-size="11x14" data-price="25" href="#">11x14 - $25</a></li>
+                                    <li><a class="dropdown-item" data-size="16x20" data-price="40" href="#">16x20 - $40</a></li>
                                 </ul>
                             </div>                        
                         </div>
@@ -151,7 +370,13 @@
                 <div class="col-md-4">
                     <div class="card">
                         <!-- Portfolio section -->
-                        <img src="Images/Project6_Images/Fall_Group_7.jpeg" class="card-img-top" alt="Project 6">
+                        <div class="image-slider" data-project="grad">
+                        <button class="arrow prev" onclick="changeSlide('grad', -1)">&#10094;</button>
+                        <img src="Images/JJ_solo_grad.jpg" class="grad-slide active card-img-top" alt="Graduation 1">
+                        <img src="Images/Ocean_Sand_2.jpg" class="grad-slide card-img-top" alt="Graduation 2">
+                        <img src="Images/JJ_solo_grad3.jpg" class="grad-slide card-img-top" alt="Graduation 3">
+                        <button class="arrow next" onclick="changeSlide('grad', 1)">&#10095;</button>
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Seasonal Shoots</h5>
                             <p class="card-text">Brief description of the project.</p>
@@ -161,20 +386,41 @@
                                 Available Sizes
                                 </button>
                                 <ul class="dropdown-menu">
-                                <li><a class="dropdown-item">8x10 - $15</a></li>
-                                <li><a class="dropdown-item">20x24 - $60</a></li>
-                                <li><a class="dropdown-item">24x36 - $100</a></li>
-                                <li><a class="dropdown-item">11x14 - $25</a></li>
-                                <li><a class="dropdown-item">16x20 - $40</a></li>
+                                    <li><a class="dropdown-item" data-size="8x10" data-price="15" href="#">8x10 - $15</a></li>
+                                    <li><a class="dropdown-item" data-size="20x24" data-price="60" href="#">20x24 - $60</a></li>
+                                    <li><a class="dropdown-item" data-size="24x36" data-price="100" href="#">24x36 - $100</a></li>
+                                    <li><a class="dropdown-item" data-size="11x14" data-price="25" href="#">11x14 - $25</a></li>
+                                    <li><a class="dropdown-item" data-size="16x20" data-price="40" href="#">16x20 - $40</a></li>
                                 </ul>
                             </div>                        
                         </div>
                     </div>
                 </div>
             </div>
-            </div>  
+            </div>
+            
         </div>
     </section>
     </div>
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+  item.addEventListener('click', function () {
+    const size = this.dataset.size;
+    const price = this.dataset.price;
+
+    // Find the image associated with this card
+    const card = this.closest('.card');
+    const activeImg = card.querySelector('.grad-slide.active');
+    const imgSrc = activeImg ? activeImg.getAttribute('src') : 'default.jpg';
+
+    // Get project name
+    const imageSlider = card.querySelector('.image-slider');
+    const project = imageSlider ? imageSlider.dataset.project : 'unknown';
+
+    // Redirect to checkout with parameters
+    const query = `checkout.html?image=${encodeURIComponent(imgSrc)}&size=${encodeURIComponent(size)}&price=${encodeURIComponent(price)}&project=${encodeURIComponent(project)}`;
+    window.location.href = query;
+  });
+});
+
 </body>
 </html>
