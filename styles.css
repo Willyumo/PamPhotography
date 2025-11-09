@@ -195,26 +195,23 @@
     font-size: 3rem;
 }
 
-.h1-image-title {
+.h1-homepage-title {
     font-size: 3rem; /* Increase the font size */
-    text-shadow: 4px 2px 2px rgba(255, 165, 0, 0.7); /* #F27405 text shadow */
-    border: 2px solid white; /* Add a border */
+    text-shadow: 4px 2px 2px rgba(68, 68, 68, 0.7); /* #F27405 text shadow */
     padding: 10px 60px; /* Add padding inside the border */
     display: inline-block; /* Make the element fit its content */
-    border-radius: 5px; /* Rounded corners */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    box-shadow: 3px 3px 3px rgba(255, 165, 0, 0.5); /* Outer glow effect */
-    color: white;
+    color: rgb(228, 227, 227);
     position: absolute; /* Position absolutely within its container */
     left: 60%; /* Move to the horizontal center */
     transform: translateX(-50%); /* Adjust back by half its width */
-    top: 0px; /* Distance from the top of its container */
     margin-top: 30px;
     margin-bottom: 80px;
     width: auto; /* Allow the width to adjust to content */
     max-width: 90%; /* Prevent it from becoming too wide on small screens */
     text-align: center; /* Center the text inside */
     z-index: 10; /* Ensure it's above other elements */
+    font-family:  'comfotaa', serif;
+    font-weight: 700px;
 }
 
 .h1-portfolio-title {
@@ -283,6 +280,7 @@
     color: #F27405;
     text-decoration: none; /* Remove underline */
 }
+
 .a-section:hover {
     color: black; /* Change color on hover */
 }
@@ -554,6 +552,15 @@
 
 }
 
+.bottom-section {
+    font-size: 2rem; /* Increase the font size */
+    padding-top: -100px;
+    padding-bottom: 50px;
+    margin-top: -100px;
+    margin-bottom: 10px;
+    text-align: center; /* Center the text */
+    color: #0D0D0D; /* Dark text color */
+}
 /* Checkout details styling */
 #checkout-details {
   font-size: 1.2rem;
@@ -574,6 +581,42 @@
   color: #4caf50;
   font-weight: bold;
 }
+
+/* About Me - Date*/
+#sevenDaysAgoDate {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 40px;
+    right: 200px;
+    font-family: 'nunito', sans-serif;
+
+}
+
+.notepad-container {
+  position: relative;     /* parent container for absolute positioning */
+  width: 100%;            /* or a fixed size if the notepad image has a known size */
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.notepad-bg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.notepad-text {
+  position: absolute;
+  top: 40.6%;               /* adjust to align with your notepad lines */
+  left: 50%;
+  transform: translate(-50%, -50%);  /* keeps it centered as you type */
+  width: 70%;             /* or match the area where text should appear */
+  font-size: 1.6rem;
+  line-height: 2.95;
+  text-align: left;
+  color: #000;            /* or any color that contrasts the background */
+  font-family: 'nunito', serif;
+}
+
 
 
 /* MOBILE OPTIMIZATION */

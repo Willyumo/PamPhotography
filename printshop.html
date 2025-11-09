@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head class="head-container">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DH06 Production - Portfolio">
-    <title>DH06 Production  | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DH06 Production - Portfolio">
+  <title>DH06 Production | Portfolio</title>
+
+  <!-- Load fonts first -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Then your CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Then external libraries -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <!-- Scripts last -->
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script defer src="script.js"></script> 
 </head>
-  
+
 <body>
   <!-- Portfolio Section -->
     <div class="middle-section">
@@ -33,7 +42,7 @@
                         <button class="arrow next" onclick="changeSlide('grad', 1)">&#10095;</button>
                         </div>                        
                         <div class="card-body">
-                            <h5 class="card-title">Graduation</h5>
+                            <h5 class="card-title">Architecture</h5>
                             <p class="card-text">Brief description of the project.</p>
                             <!-- Dropdown -->
                             <div class="dropdown">
@@ -62,7 +71,7 @@
                         <button class="arrow next" onclick="changeSlide('grad', 1)">&#10095;</button>
                         </div>
                        <div class="card-body">
-                            <h5 class="card-title">Cosplay Shoot</h5>
+                            <h5 class="card-title">Architecture Black & White</h5>
                             <p class="card-text">Brief description of the project.</p>
                             <!-- Dropdown -->
                             <div class="dropdown">
@@ -92,7 +101,7 @@
                         <button class="arrow next" onclick="changeSlide('grad', 1)">&#10095;</button>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Birthday Bash</h5>
+                            <h5 class="card-title">Nature Scene</h5>
                             <p class="card-text">Brief description of the project.</p>
                             <!-- Dropdown -->
                             <div class="dropdown">
@@ -401,7 +410,8 @@
             
         </div>
     </section>
-    </div>
+    </div> 
+<!---- <script>
     document.querySelectorAll('.dropdown-item').forEach(item => {
   item.addEventListener('click', function () {
     const size = this.dataset.size;
@@ -421,6 +431,6 @@
     window.location.href = query;
   });
 });
-
+</script> -->
 </body>
 </html>

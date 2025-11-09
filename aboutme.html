@@ -2,17 +2,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head class="head-container">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DH06 Production - Portfolio">
-    <title>DH06 Production  | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DH06 Production - Portfolio">
+  <title>DH06 Production | Portfolio</title>
+
+  <!-- Load fonts first -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Then your CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Then external libraries -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <!-- Scripts last -->
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script defer src="script.js"></script> 
 </head>
 
+
 <body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+        <div class="navbar-brand-container">
+            <!-- Navbar logo -->
+            <img src="Images/DH06_Logo_Fixed.png" alt="Logo" class="navbar-logo">
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home Page</a></li>
+                <li class="nav-item"><a class="nav-link" href="aboutme.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="printshop.html"> Print Shop</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- About Section -->
+    <div class="middle-section">
+        <section id="about" class="py-5">
+            <div class="notepad-container">
+                <img src="Images/Website%20Extras/white_black_Notepad_2.png" class="notepad-bg">
+                <br>
+                <p id="sevenDaysAgoDate"></p>
+                    <p class="p-section">
+                    <div class="notepad-text">
+                        For over 15 years, photography has been more than a passion — it’s been a journey. What began with portraits, nature,
+                        and architectural shots soon led me to work alongside professionals connected with the NFL, The New York Times, and National Geographic. 
+                        These experiences gave me a level of training and inspiration that no classroom could match.
+                        From Maine to Florida, I’ve captured the beauty of landscapes, architecture, and unforgettable events. 
+                        Along the way, I discovered a true love for boudoir photography — a personal favorite for the creativity, confidence, 
+                        and emotion it allows me to bring out in my clients. To me, photography is the art of seeing the world differently. 
+                        My goal is simple: to tell your story, preserve your memories, and create images that reflect both artistry and authenticity. 
+                        Whether it’s an intimate session or a large-scale event, I bring imagination, professionalism, and passion to every shot.
+
+                    </div>
+                <br>
+                <br>
+            </div>
+        </section>
+    </div>
+
+    <!-- Bottom Section -->
+        <div class="bottom-section">
+            <div class="a-section">
+                <a href="index.html" class="btn">Back to Home</a>
+            </div>
+        </div>
+
 
 </body>
 </html>
