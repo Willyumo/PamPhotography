@@ -213,6 +213,18 @@
     font-family:  'comfotaa', serif;
     font-weight: 700px;
 }
+.h1-sidebar-title {
+    font-size: 3.5rem; /* Increase the font size */
+    font-family:  'comfotaa', serif;
+    font-weight: 700px;
+}
+
+.h1-sidebar-options {
+    font-size: 2.5rem; /* Increase the font size */
+    font-family:  'comfotaa', serif;
+    font-weight: 600;
+
+}
 
 .h1-portfolio-title {
     text-shadow: 4px 2px 2px rgba(255, 165, 0, 0.7); /* #F27405 text shadow */
@@ -230,6 +242,22 @@
     font-size: 3rem; /* Increase the font size */ 
     width: 400px; /* Allow the width to adjust to content */
     max-width: 90%; /* Prevent it from becoming too wide on small screens */
+    font-family:  'nunito', serif;
+    font-weight: 600;
+}
+
+.h1-print-title {
+    font-size: 1.5rem;    
+    margin-bottom: 10px;
+    color: #A66124;
+    text-shadow: none;
+}
+
+.h1-print-sizes {
+    font-size: 1rem;    
+    margin-bottom: 10px;
+    color: #A66124;
+    text-shadow: none;
 }
 
 /* Add this to the parent container of .h1-image-title */
